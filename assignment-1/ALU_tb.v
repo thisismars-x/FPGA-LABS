@@ -48,6 +48,9 @@ module alu8_tb;
         $display("\n============= ALU TEST =============");
 
         // Basic operations
+        // All tests use inputs A = 45, B = 15,
+        // and executes one ALU function selected by
+        // 4 bit signal sel
         test("ADD", 45, 15, 4'b0000);
         test("SUB", 45, 15, 4'b0001);
         test("AND", 45, 15, 4'b0010);
@@ -67,13 +70,25 @@ module alu8_tb;
 
         $display("------------------------------------");
 
-        // Edge cases
-        test("ADD_C",   8'hFF, 8'h01, 4'b0000);
-        test("SUB_B",   8'd10, 8'd20, 4'b0001);
-        test("ZERO",    8'd0,  8'd0,  4'b0011);
-        test("ADD_OV",  8'd127,8'd1,  4'b0000);
-        test("SUB_OV",  8'h80, 8'h01, 4'b0001);
-        test("EQ_T",    8'd99, 8'd99, 4'b1111);
+
+        // Edge cases and flag verification tests
+        // Addition with carry-out:
+        test("ADD_C", 8'hFF, 8'h01, 4'b0000); // 255 + 1 = 256 -> Result = 0, Carry = 1
+
+        // Subtraction with borrow:
+        test("SUB_B", 8'd10, 8'd20, 4'b0001); // 10 - 20 = -10 (represented as 246 in 2's complement)
+
+        // Zero flag verification:
+        test("ZERO", 8'd0, 8'd0, 4'b0011); // 0 OR 0 = 0 -> Zero flag should be asserted
+
+
+        // Signed addition overflow:
+        test("ADD_OV", 8'd127, 8'd1, 4'b0000); // 127 + 1 = -128 in signed 8-bit representation
+
+        // Signed subtraction overflow:
+        test("SUB_OV", 8'h80, 8'h01, 4'b0001); // -128 - 1 causes signed overflow
+
+        test("EQ_T", 8'd99, 8'd99, 4'b1111);
 
         $display("====================================\n");
 
