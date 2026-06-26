@@ -2,10 +2,15 @@
 # 8-Bit Arithmetic Logic Unit (ALU) - Verilog & FPGA Implementation
 
 # 8-Bit ALU (Arithmetic Logic Unit)
+
 **Name:** Avi KC
-**Roll. no:** 079bct025
+
+**Roll No.:** 079BCT025
+
 **Department:** Electronics, Communication and Information Engineering (BEI)
+
 **Institution:** Pulchowk Campus, Institute of Engineering
+
 **Assignment:** FPGA Laboratory Assignment
 
 ---
