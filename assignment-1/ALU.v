@@ -1,18 +1,20 @@
 module alu8 (
     input  wire [7:0] A,
     input  wire [7:0] B,
-    input  wire [3:0] sel,
+    input  wire [3:0] sel, // 4 bit Control/Select signal that selects which ALU op to perform
 
-    output reg  [7:0] Result,
-    output reg        Cout,
-    output wire       Zero,
+    output reg  [7:0] Result, // Contains output of the selected ALU op
+    output reg        Cout, // Carry out flag
+    output wire       Zero, 
     output reg        Overflow
 );
 
     reg [8:0] temp;
 
+    // this block is run everytime any signal inside
+    // the block changes
     always @(*) begin
-        // Default values
+        // defaults
         Result   = 8'b0;
         Cout     = 1'b0;
         Overflow = 1'b0;
