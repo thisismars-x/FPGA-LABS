@@ -1,0 +1,270 @@
+$date
+	Sun Aug  9 20:17:47 2026
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module tb_fft8_dit $end
+$var wire 1 ! done $end
+$var wire 16 " X7_re [15:0] $end
+$var wire 16 # X7_im [15:0] $end
+$var wire 16 $ X6_re [15:0] $end
+$var wire 16 % X6_im [15:0] $end
+$var wire 16 & X5_re [15:0] $end
+$var wire 16 ' X5_im [15:0] $end
+$var wire 16 ( X4_re [15:0] $end
+$var wire 16 ) X4_im [15:0] $end
+$var wire 16 * X3_re [15:0] $end
+$var wire 16 + X3_im [15:0] $end
+$var wire 16 , X2_re [15:0] $end
+$var wire 16 - X2_im [15:0] $end
+$var wire 16 . X1_re [15:0] $end
+$var wire 16 / X1_im [15:0] $end
+$var wire 16 0 X0_re [15:0] $end
+$var wire 16 1 X0_im [15:0] $end
+$var parameter 32 2 DATA_WIDTH $end
+$var reg 1 3 clk $end
+$var reg 1 4 load $end
+$var reg 1 5 rst $end
+$var reg 128 6 x_im [127:0] $end
+$var reg 128 7 x_re [127:0] $end
+$scope module dut $end
+$var wire 1 3 clk $end
+$var wire 1 4 load $end
+$var wire 1 5 rst $end
+$var wire 128 8 x_im [127:0] $end
+$var wire 128 9 x_re [127:0] $end
+$var parameter 32 : DATA_WIDTH $end
+$var parameter 3 ; S_DONE $end
+$var parameter 3 < S_IDLE $end
+$var parameter 3 = S_LOAD $end
+$var parameter 3 > S_STAGE1 $end
+$var parameter 3 ? S_STAGE2 $end
+$var parameter 3 @ S_STAGE3 $end
+$var parameter 16 A TWIDDLE_45 $end
+$var reg 16 B X0_im [15:0] $end
+$var reg 16 C X0_re [15:0] $end
+$var reg 16 D X1_im [15:0] $end
+$var reg 16 E X1_re [15:0] $end
+$var reg 16 F X2_im [15:0] $end
+$var reg 16 G X2_re [15:0] $end
+$var reg 16 H X3_im [15:0] $end
+$var reg 16 I X3_re [15:0] $end
+$var reg 16 J X4_im [15:0] $end
+$var reg 16 K X4_re [15:0] $end
+$var reg 16 L X5_im [15:0] $end
+$var reg 16 M X5_re [15:0] $end
+$var reg 16 N X6_im [15:0] $end
+$var reg 16 O X6_re [15:0] $end
+$var reg 16 P X7_im [15:0] $end
+$var reg 16 Q X7_re [15:0] $end
+$var reg 1 ! done $end
+$var reg 32 R mult_im [31:0] $end
+$var reg 32 S mult_re [31:0] $end
+$var reg 4 T sample_index [3:0] $end
+$var reg 3 U state [2:0] $end
+$var integer 32 V i [31:0] $end
+$scope function reverse3 $end
+$var reg 3 W value [2:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+b101101010000010 A
+b100 @
+b11 ?
+b10 >
+b1 =
+b0 <
+b101 ;
+b10000 :
+b10000 2
+$end
+#0
+$dumpvars
+bx W
+bx V
+b0 U
+b0 T
+bx S
+bx R
+b0 Q
+b0 P
+b0 O
+b0 N
+b0 M
+b0 L
+b0 K
+b0 J
+b0 I
+b0 H
+b0 G
+b0 F
+b0 E
+b0 D
+b0 C
+b0 B
+b0 9
+b0 8
+b0 7
+b0 6
+15
+04
+03
+b0 1
+b0 0
+b0 /
+b0 .
+b0 -
+b0 ,
+b0 +
+b0 *
+b0 )
+b0 (
+b0 '
+b0 &
+b0 %
+b0 $
+b0 #
+b0 "
+0!
+$end
+#5000
+13
+#10000
+03
+#15000
+13
+#20000
+03
+b11001000000000011001000000000010010110000000001100100000000000111110100000000100101100000000010101111000000001100100000 6
+b11001000000000011001000000000010010110000000001100100000000000111110100000000100101100000000010101111000000001100100000 8
+b11001000000000001010111100000000100101100000000001111101000000000110010000000000010010110000000000110010000000000001100100 7
+b11001000000000001010111100000000100101100000000001111101000000000110010000000000010010110000000000110010000000000001100100 9
+05
+#25000
+13
+#30000
+03
+14
+#35000
+b1 U
+13
+#40000
+03
+04
+#45000
+b1 T
+b0 W
+13
+#50000
+03
+#55000
+b10 T
+b1 W
+13
+#60000
+03
+#65000
+b11 T
+b10 W
+13
+#70000
+03
+#75000
+b100 T
+b11 W
+13
+#80000
+03
+#85000
+b101 T
+b100 W
+13
+#90000
+03
+#95000
+b110 T
+b101 W
+13
+#100000
+03
+#105000
+b111 T
+b110 W
+13
+#110000
+03
+#115000
+b10 U
+b0 T
+b111 W
+13
+#120000
+03
+#125000
+b11 U
+b1000 V
+13
+#130000
+03
+#135000
+b100 U
+b1000 V
+13
+#140000
+03
+#145000
+b101 U
+b1000110101101011001000000 R
+b1000110101101011001000000 S
+13
+#150000
+03
+#155000
+b0 U
+b1111110111001011 #
+b1111110111001011 P
+b1111101010101011 "
+b1111101010101011 Q
+b1111110011100000 $
+b1111110011100000 O
+b11101011 '
+b11101011 L
+b1111110111001011 &
+b1111110111001011 M
+b110010000 )
+b110010000 J
+b1111111001110000 (
+b1111111001110000 K
+b1000110101 +
+b1000110101 H
+b1111111100010101 *
+b1111111100010101 I
+b1100100000 -
+b1100100000 F
+b10101010101 /
+b10101010101 D
+b1000110101 .
+b1000110101 E
+b111000010000 1
+b111000010000 B
+b111000010000 0
+b111000010000 C
+1!
+13
+#160000
+03
+#165000
+0!
+13
+#170000
+03
+#175000
+13
+#176000
